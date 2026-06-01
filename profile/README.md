@@ -22,17 +22,16 @@ LAYER 2 — INTELLIGENCE       Allora • Whale flow • Sentiment • Rugpull v
 LAYER 3 — RECONCILIATION     Strategy + source-vote must agree; adaptive sizing
 ```
 
-### Validated performance (V5)
+### What's validated — and what isn't (honesty first)
 
-| Metric | Value | Context |
-|---|---|---|
-| **Win rate** | **77.78%** | 9 trades / 7 wins, 90d MNT replay |
-| **ROI** | **+1.23%** | vs MNT buy-and-hold **-7%** |
-| **Outperformance** | **+8.23 pp** | during MNT bear phase |
-| Profit factor | 1.70 | |
-| Max drawdown | 1.75% | |
+| Claim | Status |
+|---|---|
+| **Regime classifier** | **82.6% out-of-sample accuracy** (91.6% on confident calls) — verified |
+| Trend-following alpha | ❌ **none** — fails full-history walk-forward; earlier single-window returns were artifacts (**retracted**) |
+| OI-contrarian (positioning) | the **one** edge surviving OOS — hedge-like, **caveated** (bear-amplified, inconsistent fold-to-fold) |
+| Accuracy → profit | accuracy is *not* money-weighted profit; the regime engine's job is **capital allocation**, not prediction |
 
-Iteration story V0 → V5: **49% → 77.78%** win rate across 6 systematic revisions.
+We publish what *doesn't* work too. The org **abstains** when no validated edge applies — a feature, not a failure.
 
 ---
 
@@ -80,7 +79,7 @@ All six core contracts deployed + verified on Mantlescan. **HeliQuant ships the 
 
 ## Honest disclosures
 
-- V5 win rate (77.78%) on small sample (9 trades). Statistically modest but defensible.
-- Strategy Lifecycle Manager keeps Momentum dormant during MNT bear phase; would re-activate when 30-day macro trend confirms.
-- BTC tested as second asset → returned -4.42% — per-asset parameter tuning required. Roadmap.
-- Live forward paper-trade sessions fired 0 trades in 45 minutes — correct disciplined behaviour during sideways MNT.
+- The headline isn't a return — it's **rigor**. No all-weather alpha exists here, and we say so out loud.
+- OI-contrarian's strong aggregate OOS was **amplified by a bear market** and is inconsistent fold-to-fold → deployed as a risk-controlled hedge, never a guarantee.
+- Regime accuracy (82.6% OOS) is real but **did not** become simulated trading profit → the engine allocates capital + sizes risk; it does not predict price.
+- Sessions frequently fire **0 trades** (e.g. sideways MNT / no validated edge) — a correct, disciplined ABSTAIN, not a bug.
