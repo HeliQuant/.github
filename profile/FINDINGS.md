@@ -37,7 +37,7 @@ Open-interest build-up tends to mean-revert. Positioning *contrarian* to it prod
 Funding rates here are too small and flip sign too often — trading fees eat the carry (a naive version lost 30–39%). Tested, measured, rejected.
 
 **11. The one edge, validated and deployable — on MNT specifically.**
-Drilling the OI-contrarian signal per asset, only **MNT** clears the cost-aware out-of-sample bar: **58.8% win rate, 1.30 payoff, 34 trades, +28.9% OOS**. (BTC's edge is eaten by fees; ETH/SOL flip to momentum and lose.) It is the *single* entry in our `validated_edges.json` registry — and the only signal allowed to size up. One real edge, honestly scoped — not a dashboard of imaginary ones.
+Drilling the OI-contrarian signal per asset, only **MNT** clears the cost-aware out-of-sample bar: **58.8% win rate, 34 trades, gross ~+90 bps/trade.** Net of a *realistic* execution cost — **fee + spread + slippage (~20 bps round-trip), not the optimistic fee-only 11 bps** — it returns **+25.1% OOS, 1.22 payoff** (a 100-trade live test taught us a real fill pays the spread too, so we validate against it; the fee-only figure was +28.9%). The edge has huge margin (survives up to ~40 bps cost) but **must trade a LIQUID venue** — a wide spread eats it. (BTC's edge is eaten by costs; ETH/SOL flip to momentum and lose.) It is the *single* entry in our `validated_edges.json` registry — the only signal allowed to size up. One real edge, honestly scoped — costs and all.
 
 ---
 
