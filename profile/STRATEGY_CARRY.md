@@ -8,7 +8,8 @@
 
 ## Why this exists
 
-HeliQuant's directional edge (OI-Contrarian) is validated on **MNT** and abstains on efficient majors —
+HeliQuant's directional edge (OI-Contrarian) was once validated on **MNT** — but has since **decayed on
+fresh data and been demoted** (validated registry now empty), and it always abstained on efficient majors —
 because you **can't predict** an efficient market. But profit ≠ prediction. The pros who consistently
 earn on BTC/ETH don't forecast direction; they harvest **structure**. The most accessible structural
 yield is the **perpetual funding rate**, captured **delta-neutral**.
@@ -124,7 +125,7 @@ against a year of funding. (This is why churning kills it — §4.)
 
 HeliQuant runs a **portfolio of validated strategies**, not one trick:
 
-- **Directional:** OI-Contrarian, validated + anchored on Mantle, on **MNT** (hedge-like, +28.9% OOS).
+- **Directional:** OI-Contrarian on **MNT** — validated + anchored on Mantle on its original window (hedge-like, +28.9% OOS), **since decayed on fresh data to −7.2% OOS and demoted** (registry now empty; the on-chain anchor is an immutable snapshot of what validated at block-time, not a claim it still works).
 - **Market-neutral:** this **Funding Carry**, richest + crash-tested on **HYPE** (+7.2%/yr) — a second,
   *uncorrelated* return stream that earns when nothing is predictable.
 

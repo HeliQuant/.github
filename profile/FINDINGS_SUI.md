@@ -1,7 +1,8 @@
 # 🌊 HeliQuant — The SUI Discovery
 
 > An **honest, out-of-sample, walk-forward-validated** edge on **SUI perps** — found by HeliQuant's
-> self-learning edge lab, and held to the exact same anti-overfit gate as our flagship MNT edge.
+> self-learning edge lab, and held to the exact same anti-overfit gate as our former flagship MNT edge
+> (which has since **decayed on fresh data and been demoted** — the validated registry is now empty).
 > Every number below is from a real backtest script, net of realistic fees. **No hallucinated alpha.**
 
 ---
@@ -99,7 +100,8 @@ whether it's a recent fluke or a durable property:
 | **100%** | **+205.8%** | **4/5** | **+23.6%** | **robust (and strengthening)** |
 
 The edge was **weak early and became robust + strengthening across the last 80→100% of history** —
-the **same maturation pattern as our validated MNT edge.** That's encouraging, but it also honestly means
+the **same maturation pattern our MNT edge once showed** (MNT has since decayed on fresh data and been
+demoted — registry now empty; a reminder that "robust today" is exactly why we forward-confirm). That's encouraging, but it also honestly means
 the edge is *more recent than it is ancient*, which is precisely why we hold it to a forward-confirmation
 rule before risking capital (next section).
 

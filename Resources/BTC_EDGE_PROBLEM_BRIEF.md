@@ -8,10 +8,13 @@
 
 ## 1. CONTEXT — what HeliQuant is + what we're trying
 
-HeliQuant is an autonomous multi-agent trading firm (7 desks → PM) on Mantle. Its ONE validated edge is
+HeliQuant is an autonomous multi-agent trading firm (7 desks → PM) on Mantle. Its flagship edge was
 **OI-Contrarian**: fade perp open-interest 24h-change extremes (top quintile of OI-change → SHORT,
-bottom quintile → LONG, hold 24h). On **MNT** this clears a strict gate: **58.8% win, 1.30 payoff,
-+28.9% OOS, ~+79 bps/trade** net of fees. We want the SAME edge to work on **BTC**.
+bottom quintile → LONG, hold 24h). On **MNT** it once cleared a strict gate: **58.8% win, 1.30 payoff,
++28.9% OOS, ~+79 bps/trade** net of fees (true on its ~1-yr window). *Honesty note: on fresh full-history
+data that edge has since **decayed to −7.2% OOS** and our self-learning loop **demoted it — the validated
+registry is now empty.** The MNT numbers below stand as the historical record of what validated on that
+window, not a claim it's still live.* We wanted the SAME edge to work on **BTC** — it never did.
 
 **The gate every edge must pass** (this is the whole point — anti-overfit, cost-aware):
 1. Cost-aware OOS: net return = `pos·move − 2·taker_fee`; ROI > 0 AND > buy&hold AND avg_bps > round-trip fee.
@@ -27,7 +30,7 @@ Fee assumption: Bybit perp **taker ≈ 0.055%/side → ~11 bps round-trip**.
 
 | Asset | dir | OOS ROI | trades | avg bps/trade | round-trip fee | verdict |
 |-------|-----|---------|--------|---------------|----------------|---------|
-| **MNT** | contrarian | +28.9% | 34 | **+79.4 bps** | 11 bps | ✅ huge margin |
+| **MNT** | contrarian | +28.9% | 34 | **+79.4 bps** | 11 bps | ✅ huge margin *(on its original window — since decayed to −7.2% OOS on fresh data + demoted)* |
 | **BTC** | contrarian | +4.59% | 77 | **+8.3 bps** | 11 bps | ❌ **fee-eaten** (8.3 < 11) |
 
 **The mechanism:** BTC is the most efficient, most-arbitraged, most-liquid crypto market. Mispricings are
@@ -160,8 +163,10 @@ net of realistic fees. A single good backtest is NOT a yes. *Promote on evidence
   direction even **flips** contrarian↔momentum, with **ex-best-fold negative at nearly every window**. ∴ the brief's
   earlier "+8.3 bps" was a **single-window reading (≈the +31.9 @60% slice), NOT a stable edge**. Venue migration
   cannot rescue a phantom edge — lowering fees only makes a losing strategy lose less. *(Genuinely useful from the
-  research regardless: **ApeX Omni = a Mantle-native perp DEX** — a real low-fee EXECUTION venue for our VALIDATED
-  edges, MNT/SUI, not BTC.)*
+  research regardless: **ApeX Omni = a Mantle-native perp DEX** — a real low-fee EXECUTION venue for any
+  edge we validate on the Mantle-eco assets (MNT/SUI), not BTC. *(Caveat: the MNT OI edge has since decayed
+  on fresh data and been demoted, and SUI remains on probation — so this is a venue for future validated
+  edges, not a claim either is live right now.)*
 - **LESS-EFFICIENT VENUE (Hyperliquid on-chain perp DEX)** — the hypothesis that the CEX-dead edge survives
   on a smaller, less-arbitraged DEX, incl. HL's **exclusive `premium` signal** (perp vs oracle, a direct
   crowd-positioning gauge CEXes don't expose). Tested funding_fade, premium_fade, funding_chg24, premium_chg24,
