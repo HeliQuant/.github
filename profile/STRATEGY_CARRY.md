@@ -45,6 +45,25 @@ short-perp-hedged position is paid to exist.
 arbitraged) → their carry is *below* a plain stablecoin yield, so we **don't** run it there. The yield
 lives where the inefficiency is — the same lesson as our directional work.
 
+### 2b. Rigorous net — full PnL + walk-forward (`scripts/79`)
+
+The +7.2% above is **gross funding only.** Modeling the *complete* per-trade economics — funding **+ basis
+drift − the 4 fee legs** (open spot+perp, close spot+perp) — and walk-forwarding it across the year:
+
+| Hold period | HYPE net /yr | fee drag | walk-forward buckets | verdict |
+|---|---|---|---|---|
+| 7 days | **−5.0%** | −11.5% | [+1, −2, −8, −10]% | rebalancing bleeds it dry |
+| 30 days | +4.0% | −2.7% | [+9, +7, +0, −1]% | borderline |
+| **90 days** | **+5.8%** | −0.9% | **[+11, +9, +2, +1]% — 4/4 positive** | ✅ **real + durable** |
+
+Three honest refinements: **(1)** the trustworthy net is **+5.8%/yr at a ~quarterly hold**, not +7.2% —
+fees and basis are real. **(2)** It's **~entirely funding (basis drift ≈ 0)** → durable carry, *not* basis
+luck. **(3) Holding period is everything:** weekly rebalancing bleeds ~11%/yr in fees (net negative);
+quarterly costs ~1%. *Hold long, rebalance rarely* — the math behind §4's "always-on beat clever." Caveat:
+the walk-forward buckets are **declining** (+11→+1%) — the carry is **compressing** as funding cools (the
+live carry desk reads this in real time). Still clears risk-free, but thinly. SUI nets **+4.3%** and BTC
+**+2.8%** at 90d — both *below* risk-free once fees are modeled honestly, so **only HYPE qualifies.**
+
 ---
 
 ## 3. The crash stress-test (the part most people skip)
