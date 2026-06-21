@@ -163,9 +163,9 @@ MNT once carried the only validated edge; it has since decayed on fresh data and
 
 ---
 
-## 12. Hackathon
+## 12. Mantle deployment
 
-**Mantle Turing Test Hackathon 2026** · Track 1 (AI Trading & Strategy) · best-fit = Alpha&Data "Trading Strategy" path · target **Grand Champion**. Requirements met: trades Mantle-ecosystem assets · ERC-8004 identity · deployed + verified on Mantle Sepolia · backtesting as verifiability.
+Trades **Mantle-ecosystem assets** · **ERC-8004** agent identity · deployed + verified on **Mantle Sepolia** · backtesting as verifiability.
 
 ---
 

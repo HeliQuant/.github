@@ -14,7 +14,7 @@ Autonomous multi-source intelligence trading **firm** on Mantle Network.
 
 **HeliQuant** — from *Helios* (the Greek sun god who sees everything from the sky) + *Quant* (quantitative discipline) — is an **autonomous trading firm of seven AI desks.** Each desk reads a different **real** data source and posts a stance; they run a **bull-vs-bear debate**; a **Portfolio Manager** synthesises one disciplined decision; that decision becomes a **gated, risk-sized trade ticket**; and its hash is **anchored on-chain on Mantle.**
 
-It trades the **Mantle ecosystem**, sizes up **only** on an edge that survives cost-aware out-of-sample testing, and **abstains — honestly — when no edge applies.** Its one validated edge (OI-Contrarian on MNT) has since **decayed on fresh data and been demoted** — the registry is now empty, so the firm abstains by default. *That self-retirement is the point, not a setback.* Built for the **Mantle Turing Test Hackathon 2026**, Track 1 (AI Trading & Strategy).
+It trades the **Mantle ecosystem**, sizes up **only** on an edge that survives cost-aware out-of-sample testing, and **abstains — honestly — when no edge applies.** Its one validated edge (OI-Contrarian on MNT) has since **decayed on fresh data and been demoted** — the registry is now empty, so the firm abstains by default. *That self-retirement is the point, not a setback.*
 
 ### The firm — seven real-source desks → one PM
 
